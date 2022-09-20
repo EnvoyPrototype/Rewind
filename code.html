@@ -33,68 +33,59 @@
   </head>
 
   <body class="d-flex flex-column h-100">
-    <!-- ==== Nav Section ==== -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"
-          ><img
-            src="img/favicon-32x32.png"
-            class="d-inline-block align-text-top align-items-center"
-            alt="Jim Rogers Logo"
-            width="30"
-            height="24"
-          />
-          REWIND</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="app.html">The App</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="code.html"
-                >The Code</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                target="_blank"
-                href="https://github.com/EnvoyPrototype"
-                >Git Repo</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="#">About</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- ==== Main Section ==== -->
-    <main class="flex-shrink-0">
-      <div class="container py-4 px-5 mt-5">
-        <h2 class="border-1 border-bottom border-dark">The Code for REWIND.</h2>
-        <div class="row row-cols-1 row-cols-lg-2">
-          <div class="col-lg-8">
-            <pre class="line-numbers">
+      <!-- ==== Nav Section ==== -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">
+                  <img src="img/favicon-32x32.png"
+                       class="d-inline-block align-text-top align-items-center"
+                       alt="Rewind Logo"
+                       width="32"
+                       height="32" />
+                  REWIND
+              </a>
+              <button class="navbar-toggler"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#navbarCollapse"
+                      aria-controls="navbarCollapse"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                      <li class="nav-item">
+                          <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="app.html">The App</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link"
+                             target="_blank"
+                             href="https://github.com/EnvoyPrototype/Rewind">Git Repo</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" target="_blank" href="https://www.jimrogers.dev">About</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <!-- ==== Main Section ==== -->
+      <main class="flex-shrink-0">
+          <div class="container py-4 px-5 mt-5">
+              <h2 class="border-1 border-bottom border-dark">The Code for REWIND.</h2>
+              <div class="row row-cols-1 row-cols-lg-2">
+                  <div class="col-lg-8">
+                      <pre class="line-numbers">
 
               <!-- May have trouble with JS template literals -->
-              <code class="language-javascript">
+                      <code class="language-javascript">
                 //Get string from app UI
 //Controller function
 function getValue() {
@@ -131,90 +122,77 @@ function displayString(revString) {
 
               </code>
             </pre>
+                  </div>
+                  <div class="col-lg-4">
+                      <h5>getValue()</h5>
+                      <p>
+                          Ensures that the alert box (which displays the reversed string) is invisible. Sets the userString variable to the value of the text box. Then sets the value of the revString variable to the value of the reverseString() function. After the string is reversed, it runs the displayString() function.
+                      </p>
+                      <h5>reverseString()</h5>
+                      <p>Creates an empty array to hold the reversed string. Sets the loop index to the length of the userString parameter. By starting with the higher number (set by the index value), the loop takes the last value of the userString, adds it to the revString array, loops through the string, and ultimately reverses it. revString is returned to the getValue() function and set as the value for the variable.</p>
+                      <h5>displayString()</h5>
+                      <p>
+                          Takes the reversed string value as a parameter, and sets it as the value of the paragraph element with the <em>msg</em> id in the alert box HTML. Then removes the <em>invisible</em> class from the message box so it can display the result.
+                      </p>
+                  </div>
+              </div>
           </div>
-          <div class="col-lg-4">
-            <p>The Code is structured in one function.</p>
-            <h5>Hello World</h5>
-            <p>
-              Hello World is a function that displays an alert with a message of
-              "Hello, World!"
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!-- ==== Footer Section ==== -->
-    <footer class="footer mt-auto py-3 sticky-footer">
-      <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-lg-3 gy-2">
-          <div class="col order-last order-lg-first text-light">
-            <div>
-              <span class="text-muted">&copy;2021 </span> Jim Rogers |
-              <a href="mailto:hello@jimrogers.dev" class="contact-email"
-                >hello@jimrogers.dev</a
-              >
-            </div>
-          </div>
-          <div
-            class="
+      </main>
+      <!-- ==== Footer Section ==== -->
+      <footer class="footer mt-auto py-3 sticky-footer">
+          <div class="container-fluid">
+              <div class="row row-cols-1 row-cols-lg-3 gy-2">
+                  <div class="col order-last order-lg-first text-light">
+                      <div>
+                          <span class="text-muted">&copy;2022 </span> Jim Rogers |
+                          <a href="mailto:hello@jimrogers.dev" class="contact-email">hello@jimrogers.dev</a> | <a href="http://www.jimrogers.dev" class="contact-email" target="_blank">jimrogers.dev</a>
+                      </div>
+                  </div>
+                  <div class="
               col
               d-flex
               align-items-center
               justify-content-start justify-content-lg-center
-            "
-          >
-            <img
-              src="img/JRogers_DarkLogo.jpg"
-              alt="Jim Rogers Logo"
-              height="24"
-            />
-          </div>
-          <div
-            class="
+            ">
+
+                  </div>
+                  <div class="
               col
               d-flex
               align-items-center
               justify-content-start justify-content-lg-end
-            "
-          >
-            <div class="row">
-              <div class="col social">
-                <a
-                  href="https://www.linkedin.com/in/jimrogersdev/"
-                  target="_blank"
-                  ><i class="fab fa-linkedin fa-2x"></i>
-                </a>
-              </div>
-              <div class="col social">
-                <a href="https://github.com/EnvoyPrototype" target="_blank"
-                  ><i class="fab fa-github fa-2x"></i>
-                </a>
-              </div>
-              <div class="col social">
-                <a href="https://twitter.com/JimFromChicago" target="_blank"
-                  ><i class="fab fa-twitter fa-2x"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+            ">
+                      <div class="row">
+                          <div class="col social">
+                              <a href="https://www.linkedin.com/in/jimrogersdev/"
+                                 target="_blank">
+                                  <i class="fab fa-linkedin fa-2x"></i>
+                              </a>
+                          </div>
+                          <div class="col social">
+                              <a href="https://github.com/EnvoyPrototype" target="_blank">
+                                  <i class="fab fa-github fa-2x"></i>
+                              </a>
+                          </div>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/prism.js"></script>
-    <script>
-      Prism.plugins.NormalizeWhitespace.setDefaults({
-        "remove-trailing": true,
-        "remove-indent": true,
-        "left-trim": true,
-        "right-trim": true,
-      });
-    </script>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </footer>
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+              crossorigin="anonymous"></script>
+      <script src="js/prism.js"></script>
+      <script>
+          Prism.plugins.NormalizeWhitespace.setDefaults({
+              "remove-trailing": true,
+              "remove-indent": true,
+              "left-trim": true,
+              "right-trim": true,
+          });
+      </script>
   </body>
 </html>
